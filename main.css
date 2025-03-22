@@ -1,0 +1,153 @@
+/* 전체 스타일 */
+body {
+    font-family: 'Noto Sans KR', 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #ffffff;
+    color: #333;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+    -webkit-user-select: none; /* Safari 및 Chrome용 */
+    -moz-user-select: none; /* Firefox용 */
+    -ms-user-select: none; /* IE 및 Edge용 */
+    user-select: none;  /* 텍스트 선택 불가 */
+}
+
+/* 헤더 스타일 */
+/* header {
+    background-color: #007BFF;
+    color: white;
+    text-align: center;
+    padding: 15px 0;
+    font-size: 20px;
+    font-weight: bold;
+}
+*/
+
+header {
+    position : relative;
+    background-image : url('picture/Logo_blue.jpg');
+    background-size : cover;
+    background-position: center;
+    color : white;
+    text-align : center;
+    padding : 40px 20px;
+    font-weight: bold;
+    text-shadow : -1px -1px 0 black, 1px -1px 0 black,
+                          -1px 1px 0 black, 1px 1px 0 black;
+}
+
+/* 헤더 글씨에 링크강조 표시없음 */
+a {
+    text-decoration: none;
+    color : inherit;
+}
+
+/* 네비게이션 바 */
+nav {
+    position: sticky;
+    top: 0;
+    background-color: white;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    padding: 10px 0;
+    text-align: center;
+    z-index: 1000;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+nav li {
+    position: relative;
+}
+
+nav a {
+    text-decoration: none;
+    color: #007BFF;
+    font-weight: bold;
+    padding: 10px 15px;
+    border-radius: 5px;
+    transition: background 0.3s, color 0.3s;
+}
+
+nav a:hover {
+    background-color: #007BFF;
+    color: black;
+}
+
+/* 드롭다운 스타일 */
+.submenu {
+    position: absolute;
+    top: 130%;
+    left: 0;
+    background: white;
+    display: none;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
+    min-width: 200px;
+}
+
+.submenu li {
+    text-align: left;
+}
+
+.submenu a {
+    display: block;
+    padding: 10px;
+    color: #007BFF;
+    font-weight: normal;
+}
+
+.submenu a:hover {
+    background: #F5F5F5;
+}
+
+/* 드롭다운 활성화 */
+.dropdown:hover .submenu {
+    display: block;
+}
+
+/* 버튼 스타일 */
+.button {
+    background-color: #007BFF;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background 0.3s ease-in-out;
+}
+
+.button:hover {
+    background-color: #0056b3;
+}
+
+/* 반응형 스타일 (모바일 최적화) */
+@media (max-width: 768px) {
+    nav ul {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .submenu {
+        position: static;
+        display: block;
+        background: none;
+        box-shadow: none;
+    }
+}
+
+img {
+    width : 100%;
+    height : auto;
+    object-fit: cover;
+}
