@@ -125,8 +125,8 @@ nav a:hover {
 .menu-toggle {
     display: none; /* 기본적으로 안 보이게 설정 */
     position: absolute;
-    top: 15px;
-    right: 20px;
+    top: 10px;
+    left: 20px;
     background: none;
     border: none;
     font-size: 24px;
