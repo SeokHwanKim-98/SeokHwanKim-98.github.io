@@ -126,7 +126,7 @@ nav a:hover {
     display: none; /* 기본적으로 안 보이게 설정 */
     position: absolute;
     top: 10px;
-    left: 20px;
+    right: 20px;
     background: none;
     border: none;
     font-size: 24px;
