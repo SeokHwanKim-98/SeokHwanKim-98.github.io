@@ -15,33 +15,23 @@ body {
 }
 
 /* 헤더 스타일 */
-/* header {
-    background-color: #007BFF;
+header {
+    position: relative;
+    background-image: url('picture/Logo_blue.jpg');
+    background-size: cover;
+    background-position: center;
     color: white;
     text-align: center;
-    padding: 15px 0;
-    font-size: 20px;
+    padding: 40px 20px;
     font-weight: bold;
-}
-*/
-
-header {
-    position : relative;
-    background-image : url('picture/Logo_blue.jpg');
-    background-size : cover;
-    background-position: center;
-    color : white;
-    text-align : center;
-    padding : 40px 20px;
-    font-weight: bold;
-    text-shadow : -1px -1px 0 black, 1px -1px 0 black,
-                          -1px 1px 0 black, 1px 1px 0 black;
+    text-shadow: -1px -1px 0 black, 1px -1px 0 black,
+                 -1px 1px 0 black, 1px 1px 0 black;
 }
 
-/* 헤더 글씨에 링크강조 표시없음 */
+/* 헤더 링크 스타일 */
 a {
     text-decoration: none;
-    color : inherit;
+    color: inherit;
 }
 
 /* 네비게이션 바 */
@@ -131,24 +121,63 @@ nav a:hover {
     background-color: #0056b3;
 }
 
-/* 반응형 스타일 */
+/* 반응형 네비게이션 (모바일) */
+.menu-toggle {
+    display: none; /* 기본적으로 안 보이게 설정 */
+    position: absolute;
+    top: 15px;
+    right: 20px;
+    background: none;
+    border: none;
+    font-size: 24px;
+    cursor: pointer;
+    color: #007BFF;
+}
+
+/* 모바일용 네비게이션 */
 @media (max-width: 768px) {
     .menu-toggle {
-        display: block;
-    }
-
-    .nav-menu {
-        width: 70%;
-        max-width: 250px;
+        display: block; /* 모바일에서는 햄버거 버튼 표시 */
     }
 
     nav {
-        display: none;
+        display: none; /* 기본적으로 숨김 */
+    }
+
+    .nav-menu {
+        position: fixed;
+        top: 0;
+        left: -250px; /* 화면 밖에 숨김 */
+        width: 250px;
+        height: 100%;
+        background-color: white;
+        box-shadow: 2px 0 5px rgba(0, 0, 0, 0.2);
+        transition: left 0.3s ease-in-out;
+        padding-top: 60px;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .nav-menu.active {
+        left: 0; /* 활성화되면 나타남 */
+    }
+
+    .nav-menu ul {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .nav-menu a {
+        display: block;
+        padding: 15px;
+        text-align: left;
+        border-bottom: 1px solid #ddd;
     }
 }
 
+/* 이미지 스타일 */
 img {
-    width : 100%;
-    height : auto;
+    width: 100%;
+    height: auto;
     object-fit: cover;
 }
