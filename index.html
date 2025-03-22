@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>아리울 항공</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            fetch("header.html")
+                .then(response => response.text())
+                .then(data => {
+                    document.getElementById("header-container").innerHTML = data;
+                });
+        });
+    </script>
+</head>
+
+
+<body>
+    
+    <div id="header-container"></div>
+
+    <h1>사진 및 동영상이 들어갈예정</h1>
+    <h3>Example</h3>
+    <img src = "picture/Logo_blue2.jpg" alt="Drone_img" class = "main-image">
+
+
+</body>
+    
+</html>
+
+<!-- 
+해야할일
+
+- 메뉴 묶음 분류 물어보고 수정할것 
+- 무엇이 더 들어가야 하는지
+- 
+
+-->
