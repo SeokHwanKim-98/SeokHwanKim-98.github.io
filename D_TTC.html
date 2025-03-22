@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>아리울 항공</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            fetch("header.html")
+                .then(response => response.text())
+                .then(data => {
+                    document.getElementById("header-container").innerHTML = data;
+                });
+        });
+    </script>
+    
+    <style>
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        th, td {
+            width : 33.33%;
+            text-align: center;
+            padding : 15px;
+            vertical-align: middle;
+        }
+
+        thead th {
+            background-color: #f2f2f2;
+        }
+    </style>
+</head>
+
+
+<body>
+    
+    <div id="header-container"></div>
+
+    <main>
+        <!-- 표를 만들어서 내용 작성했음 -->
+        <table>
+            <caption><h1>전력망 관리 주요 이점</h1></caption>
+            <thead>
+                <th><h2>식생 관리</h2></th><th><h2>자산무결성 관리</h2></th><th><h2>상세 검사</h2></th>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>전선 회랑지도를 신속하게 작성하여,  식생과 전선 사이의 거리를 측정하는 정확한 2D및 3D모델을 생성해서 안전한 간격 거리를 유지할 수 있습니다.</td>
+                    <td>자주 주문형 검사를 수행하여 전력망의 안전, 신뢰성 및 무결성을 모니터링하여 효율성을 개선하고 위험을 제거합니다.</td>
+                    <td>결함을 정확하게 식별하는 자동 드론 검사에서 표준화된 검사 데이터를 획득합니다.</td>
+                </tr>
+            </tbody>
+            <thead>
+                <th><h2>열화상검사</h2></th><th><h2>결함 검사</h2></th><th><h2>야간 검사</h2></th>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>방사성 열 센서가 장착된 드론을 사용하여 자산의 온도를 실시간으로 판독하여 이상을 즉시 식별합니다.</td>
+                    <td>드론을 사용하여 여러 각도에서 자산 상태를 촬영하여 고장이나 결함을 밝혀 내고 적시에 해결합니다.</td>
+                    <td>저조도 환경이나 야간에 스포트라이트가 장착된 드론을 사용하여 검사를 수행합니다.</td>
+                </tr>
+            </tbody>
+        </table>
+
+
+
+    </main>
+</body>
+
+</html>

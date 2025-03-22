@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>아리울 항공</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            fetch("header.html")
+                .then(response => response.text())
+                .then(data => {
+                    document.getElementById("header-container").innerHTML = data;
+                });
+        });
+    </script>
+</head>
+
+<body>
+    <div id="header-container"></div>
+    <main>
+        <video src = "video/d_cleanning.mp4" id="myVideo" width="100%" 
+                    height="640" autoplay muted>
+            비디오를 지원하지않는 브라우저입니다.
+        </video>
+        
+        <script>
+            var video = document.getElementById('myVideo');
+            video.onended = function() {
+                window.scrollTo({
+                    top: document.body.scrollHeight,
+                    behavior: 'smooth'
+                });
+            };
+        </script>
+
+
+    </main>
+
+</body>
+
+</html>
