@@ -1,4 +1,13 @@
 <?php
+
+// 요청 메서드가 POST인지 확인
+if ($_SERVER['REQUEST_METHOD'] != 'POST') {
+    // POST 요청이 아니면 405 에러 발생
+    header("HTTP/1.1 405 Method Not Allowed");
+    exit('405 Method Not Allowed');
+}
+
+
 // 폼 데이터 받기
 $name = isset($_POST['name']) ? $_POST['name'] : '';
 $email = isset($_POST['email']) ? $_POST['email'] : '';
