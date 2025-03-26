@@ -1,19 +1,25 @@
 document.addEventListener("DOMContentLoaded", function () {
-    const menuToggle = document.querySelector(".menu-toggle");
-    const navMenu = document.querySelector(".nav-menu");
+    const nav = document.getElementById("sideNav");
+    const hamburger = document.createElement("div");
+    hamburger.classList.add("hamburger");
+    hamburger.innerHTML = "&#9776;";
+    document.body.appendChild(hamburger);
 
-    if (menuToggle && navMenu) {  // 요소가 존재하는지 확인
-        menuToggle.addEventListener("click", function () {
-            navMenu.classList.toggle("active");
+    // 햄버거 버튼 클릭 시 네비게이션 토글
+    hamburger.addEventListener("click", function () {
+        nav.classList.toggle("open");
+    });
 
-            // 메뉴가 열릴 때 스크롤 방지 (모바일 UX 개선)
-            if (navMenu.classList.contains("active")) {
-                document.body.style.overflow = "hidden";
-            } else {
-                document.body.style.overflow = "auto";
+    // 드롭다운 메뉴 클릭 시 하위 메뉴 보이기
+    document.querySelectorAll(".dropdown > a").forEach(function (item) {
+        item.addEventListener("click", function (e) {
+            if (window.innerWidth <= 767) {
+                e.preventDefault();
+                const submenu = this.nextElementSibling;
+                if (submenu) {
+                    submenu.style.display = submenu.style.display === "block" ? "none" : "block";
+                }
             }
         });
-    } else {
-        console.error("햄버거 버튼 또는 네비게이션 메뉴를 찾을 수 없습니다.");
-    }
+    });
 });
