@@ -12,51 +12,30 @@
                 .then(response => response.text())
                 .then(data => {
                     document.getElementById("header-container").innerHTML = data;
+
+                    // 메뉴 토글 기능
+                    const menuToggle = document.querySelector(".menu-toggle");
+                    const sideNav = document.querySelector(".side-nav");
+
+                    // 햄버거 버튼 클릭 시 사이드 네비게이션 열기/닫기
+                    menuToggle.addEventListener("click", function () {
+                        sideNav.classList.toggle("active");
+                    });
                 });
         });
     </script>
-    <meta name="naver-site-verification" content="32c1da4787de3b8e78371f45ccf2ee380409bd50" />
-
 </head>
 
-
 <body>
-    
-    <div id="header-container"></div>
+    <button class="menu-toggle">&#9776;</button> <!-- 햄버거 버튼 -->
 
-    <h1>사진 및 동영상이 들어갈예정</h1>
+    <div id="header-container"></div> <!-- header.html 로드 -->
+
+    <h1>사진 및 동영상이 들어갈 예정</h1>
     <h3>Example</h3>
-    <img src = "picture/Logo_blue2.jpg" alt="Drone_img" class = "main-image">
-
-
-    
-    <!-- 문의 양식 -->
-    <section id="contact" class="contact">
-        <h2>문의하기</h2>
-        <form action="submit_form.php" method="POST">
-            <label for="name">이름</label>
-            <input type="text" id="name" name="name" required>
-    
-            <label for="email">이메일</label>
-            <input type="email" id="email" name="email" required>
-    
-            <label for="message">메시지</label>
-            <textarea id="message" name="message" required></textarea>
-    
-            <button type="submit">보내기</button>
-        </form>
-    </section>
-
-
+    <img src="picture/Logo_blue2.jpg" alt="Drone_img" class="main-image">
 </body>
-    
 </html>
 
-<!-- 
-해야할일
 
-- 메뉴 묶음 분류 물어보고 수정할것 
-- 무엇이 더 들어가야 하는지
-- 
-
--->
+<!--엑스캅터에 드론사커 질문해보기-->
