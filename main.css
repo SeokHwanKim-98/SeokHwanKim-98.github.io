@@ -78,6 +78,11 @@ nav {
     .dropdown:hover .submenu {
         display: block;
     }
+    
+    /* 햄버거 버튼 숨기기 */
+    .menu-toggle {
+        display: none;
+    }
 }
 
 /* 모바일 화면에서는 햄버거 버튼 적용 */
@@ -122,10 +127,6 @@ nav {
         display: none;
     }
 
-    /* 햄버거 버튼 숨기기 */
-    .menu-toggle {
-        display: none;
-    }
 }
 
 /* 작은 화면에서는 햄버거 버튼을 보여주기 */
