@@ -5,35 +5,53 @@
     <meta http-equiv='X-UA-Compatible' content='IE=edge'>
     <title>아리울 항공</title>
     <meta name='viewport' content='width=device-width, initial-scale=1'>
-    <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
-    <script>
-        document.addEventListener("DOMContentLoaded", function () {
-            fetch("header.html")
-                .then(response => response.text())
-                .then(data => {
-                    document.getElementById("header-container").innerHTML = data;
-
-                    // 메뉴 토글 기능
-                    const menuToggle = document.querySelector(".menu-toggle");
-                    const sideNav = document.querySelector(".side-nav");
-
-                    // 햄버거 버튼 클릭 시 사이드 네비게이션 열기/닫기
-                    menuToggle.addEventListener("click", function () {
-                        sideNav.classList.toggle("active");
-                    });
-                });
-        });
+    <link rel='stylesheet' type='text/css' media='screen' href='../main.css'>
+    <script src = "../main.js">
     </script>
+    <style>
+        .image-slider-wrapper h3 {
+            text-align: center;
+        }
+    </style>
 </head>
 
 <body>
-    <button class="menu-toggle">&#9776;</button> <!-- 햄버거 버튼 -->
 
     <div id="header-container"></div> <!-- header.html 로드 -->
 
     <h1>사진 및 동영상이 들어갈 예정</h1>
     <h3>Example</h3>
-    <img src="picture/Logo_blue2.jpg" alt="Drone_img" class="main-image">
+
+    
+    <!-- 슬라이드 이미지들 -->
+    <div class="image-slider">
+        <div class="image-slider-wrapper">
+            <a href="../D_repair.html">
+                <img src="../picture/aa.jpg" alt="Button1" class="slider-image">
+                <h3>드론 수리</h3>
+            </a>
+            <a href="../flightA.html">
+                <img src="../picture/ND.jpg" alt="Button3" class="slider-image">
+                <h3>비행금지구역</h3>
+            </a>
+            <a href="../D_sell.html">
+                <img src="../picture/dji t20.png" alt="Button2" class="slider-image">
+                <h3>농업용 드론 판매</h3>
+            </a>
+            <a href="https://www.example.com" target="_blank">
+                <img src="picture/Logo_blue.jpg" alt="Button3" class="slider-image">
+            </a>
+            <a href="https://www.example.com" target="_blank">
+                <img src="picture/Logo_blue2.jpg" alt="Button3" class="slider-image">
+            </a>
+            <a href="https://www.example.com" target="_blank">
+                <img src="picture/Logo_blue.jpg" alt="Button3" class="slider-image">
+            </a>
+            <!-- 추가 이미지 버튼 -->
+        </div>
+    </div>
+
+    <img class = "FI" src="picture/Logo_blue2.jpg" alt="Drone_img" class="main-image">
 </body>
 </html>
 
