@@ -65,6 +65,8 @@ nav {
         left: 0;
         background: #444;
         width: 200px;
+        pointer-events: auto;
+        z-index: 2000;
     }
 
     .submenu li {
@@ -129,6 +131,8 @@ nav {
     .submenu {
         display: none;
     }
+    .FI { width : 85vw; }
+
 
 }
 
@@ -201,9 +205,26 @@ nav {
 }
 
 /* 상품 상세페이지 드론 이미지 */
-.product-image {
+.product-image, .main-image {
     display : block;
     margin : auto; /* 디스플레이 block margin auto = 가운데정렬 */
     width : 90vw;
     height : auto;
+}
+
+footer {
+    background-color: #f8f8f8;
+    padding: 20px;
+}
+
+.footer-container {
+    display: flex;
+    justify-content: space-between; /* 좌우 정렬 */
+    max-width: 1200px;
+    margin: auto;
+}
+
+.footer-section {
+    width: 50%; /* 두 개의 영역을 반반 나누기 */
+    text-align: center;
 }

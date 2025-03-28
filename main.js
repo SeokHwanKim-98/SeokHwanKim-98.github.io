@@ -65,3 +65,12 @@ document.addEventListener("DOMContentLoaded", function () {
     });
 });
 
+// 바닥내용 불러오기
+document.addEventListener("DOMContentLoaded", function() {
+    fetch("../foot.html")
+        .then(response => response.text())
+        .then(data => {
+            document.getElementById("foot-container").innerHTML = data;
+        })
+        .catch(error => console.error("푸터 로딩 오류:", error));
+});
