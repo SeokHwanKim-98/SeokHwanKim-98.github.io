@@ -27,12 +27,15 @@ body, ul, li, a {
     text-decoration: none;
 }
 
+head, body {
+    width : 80vw;
+    justify-content: center;
+}
+
 body {
     font-family: Arial, sans-serif;
     padding : 0 40px;
 }
-
-.FI { width : 90vw; }
 
 /* 네비게이션 기본 스타일 */
 nav {
