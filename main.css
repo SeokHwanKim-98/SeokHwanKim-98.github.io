@@ -208,7 +208,7 @@ nav {
 .product-image, .main-image {
     display : block;
     margin : auto; /* 디스플레이 block margin auto = 가운데정렬 */
-    width : 90vw;
+    width : 80vw;
     height : auto;
 }
 
